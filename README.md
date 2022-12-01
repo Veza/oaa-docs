@@ -1,26 +1,28 @@
 ![Veza Logo](images/Veza_Lockup_Amethyst.png)
 ## Veza Overview
-Veza is the data security platform built on the power of authorization. Our platform is purpose-built for multi-cloud
-environments to help you use and share your data more safely. Veza makes it easy to dynamically visualize, understand
-and control who can and should take what action on what data. We organize authorization metadata across identity
-providers, data systems, cloud service providers, and applications — all to address the toughest data security
-challenges of the multi-cloud era. To learn more, please visit us at veza.com.
+Veza is the authorization platform for data. Our platform is purpose-built for multi-cloud environments to help you use
+and share your data more safely. Veza makes it easy to dynamically visualize, understand and control who can and should
+take what action on what data. We organize authorization metadata across identity providers, data systems, cloud service
+providers, and SaaS applications — all to help organizations with critical use cases of access governance, privilege
+access, cloud entitlements, data lake security, etc. To learn more, please visit us at [veza.com](https://veza.com).
 
 ## Open Authorization API
 
-Sometimes, you might want to integrate Veza to an app or system that we don’t yet support natively. You might have a
-custom or homegrown SaaS or on-prem app - for example, a customer service or support app that holds or accesses
-sensitive data - for which you want to see and manage authorization. Our Open Authorization API (OAA) enables a BYO-app
-model to integrate with Veza. The Open Authorization API (OAA) enables Veza customers and partners to integrate custom
-and other 3rd party applications and data systems using a standard interface.
+Veza natively supports 40+ integrations natively for systems such as Azure SharePoint, Snowflake, AWS services, GCP services,
+SQL Server, etc. That said, there are often scenarios where organizations want to integrate Veza to an in-house system, or a
+custom SaaS application, or any system (databases, etc.) that we don’t yet support natively. You might have a custom or
+homegrown SaaS or on-prem app - for example, a customer service or support app that holds or accesses sensitive data - for
+which you want to visualize and manage access to these critical systems. Our Open Authorization API (OAA) enables Veza customers
+ and partners to integrate custom and other 3rd party SaaS applications and data systems using a standard interface.
 
-In addition to the OAA, there is a small chunk of code that runs outside of the Veza SaaS infrastructure: the connector.
-The connector has 3 jobs: it needs to pull authorization data from the target system (i.e., app, data storage system, or
-service), transform that data into a format Veza can understand, and call the Veza API to import the data into Veza.
+OAA connector has 3 jobs: it needs to pull authorization data from the target system (i.e., SaaS app, data storage system, or
+custom software, etc.), transform that data into a format Veza understands, and call the Veza API to import the data into Veza.
+Using OAA and connectors, organizations can parse and upload authorization metadata for custom SaaS apps and create a more
+complete view of permissions across cloud/data/identity systems to answer the question: “who can and should take what action
+on what data?”
 
-Using OAA and connectors, organizations can parse and upload authorization metadata for apps not natively supported by
-Veza, and create a more complete view of permissions across cloud/data/identity systems to answer the question: “who can
-and should take what action on what data?”
+Open Authorization API is not currently associated with any open source bodies (IETF, etc.). We will be working with various
+teams to pursue open standards over course of time. All OAA resources in this repository are licensed under the MIT license.
 
 ## How OAA Works
 OAA works by providing a mechanism to upload authorization information from a target system to Veza in a standardized
@@ -174,9 +176,8 @@ jane.add_permission(permission="owner", resources=[resource1])
 
 ## Getting Started
 
-To get started, request access to the [OAA Community repository](https://github.com/veza/oaa-community) where you
-will find complete connectors, SDK and code samples. You can request access by joining the Slack community channel below
-or by [email](mailto:oaa_community@veza.com).
+See the [OAAClient SDK repository](https://github.com/Veza/oaaclient-py) for more information on using the Python SDK.
+See the [OAA Community repository](https://github.com/Veza/oaa-community) for existing community connectors.
 
 ## Join Us on Slack
 Join us on Slack at [#veza-oaa-community](https://join.slack.com/t/veza-world/shared_invite/zt-17d9quyiq-20JMp0ikZ0pVNz_e5W5j7Q)
